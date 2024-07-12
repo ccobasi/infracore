@@ -12,7 +12,7 @@
 
 
 export default {
-  name: 'LoginView',
+  name: 'SignUp',
   data() {
     return {
       account: undefined,
