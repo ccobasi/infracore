@@ -106,7 +106,7 @@ export default {
 
 <style scoped>
 .pageheader {
-  width: 95vw;
+  width: 100vw;
   background: #fff;
   padding: 10px 30px;
 }
