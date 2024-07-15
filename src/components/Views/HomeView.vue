@@ -11,7 +11,10 @@ import CorporateCompliance from '../ReadinessAssessment/CorporateCompliance.vue'
     <!-- <GuideLine /> -->
     <CorporateCompliance />
 
-    <div class="save"><button>Save and Continue</button></div>
+    <div class="save">
+      <button class="back-button">Back</button>
+      <button class="save-button">Save and Continue</button>
+    </div>
 
     <div class="question">
       <div class="support">
@@ -41,25 +44,30 @@ main {
   background: #eee;
 }
 .save {
-  width: 1380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
   height: 50px;
   gap: 10px;
-  opacity: 0px;
-  margin-top: 30px;
-  justify-content: end;
+  opacity: 1;
+  margin: auto;
 }
 .save button {
   width: 173px;
   height: 50px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   gap: 10px;
   border-radius: 30px;
-  opacity: 0px;
+  opacity: 1;
   background: linear-gradient(90deg, #227cbf 0%, #47b65c 100%);
   color: #fff;
-  float: right;
-  margin-right: 200px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
 }
+
 .question {
   display: flex;
   width: 1200px;
@@ -67,7 +75,7 @@ main {
   gap: 0px;
   justify-content: space-between;
   opacity: 0px;
-  margin-top: 60px;
+  margin-top: 40px;
   margin: auto;
 }
 .support {
@@ -75,6 +83,7 @@ main {
   height: 25px;
   gap: 0px;
   opacity: 0px;
+  margin-top: 10px;
 }
 .support label {
   font-family: Roboto;
@@ -106,7 +115,6 @@ main {
   border-radius: 10px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
-  background: #eeeeee;
 }
 .frequent button {
   font-family: Roboto;
