@@ -6,6 +6,7 @@ import CorporateCompliance from '../ReadinessAssessment/CorporateCompliance.vue'
 import Legal from '../ReadinessAssessment/Legal.vue'
 import Technical from '../ReadinessAssessment/Technical.vue'
 import EnvironmentalSocial from '../ReadinessAssessment/EnvironmentalSocial.vue'
+import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vue'
 </script>
 <template>
   <main>
@@ -15,7 +16,8 @@ import EnvironmentalSocial from '../ReadinessAssessment/EnvironmentalSocial.vue'
     <!-- <CorporateCompliance /> -->
     <!-- <Legal /> -->
     <!-- <Technical /> -->
-    <EnvironmentalSocial />
+    <!-- <EnvironmentalSocial /> -->
+    <FinancialInformation />
 
     <div class="save">
       <button class="back-button">Back</button>
