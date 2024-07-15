@@ -3,13 +3,15 @@ import NavBar from '../Tab/NavBar.vue'
 import TabMenu from '../Tab/TabMenu.vue'
 import GuideLine from '../ReadinessAssessment/GuideLine.vue'
 import CorporateCompliance from '../ReadinessAssessment/CorporateCompliance.vue'
+import Legal from '../ReadinessAssessment/Legal.vue'
 </script>
 <template>
   <main>
     <NavBar />
     <TabMenu />
     <!-- <GuideLine /> -->
-    <CorporateCompliance />
+    <!-- <CorporateCompliance /> -->
+    <Legal />
 
     <div class="save">
       <button class="back-button">Back</button>
