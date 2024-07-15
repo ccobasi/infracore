@@ -49,7 +49,7 @@
   gap: 0px;
   justify-content: space-between;
   opacity: 0px;
-  padding: 30px 20px;
+  padding: 30px 40px;
 }
 .tab h2 {
   font-family: Roboto;
@@ -106,11 +106,10 @@ svg {
   fill: none;
   stroke: #4caf50;
   stroke-width: 5;
-  stroke-dasharray: 226.08; /* 2 * Math.PI * radius (approx 36) */
-  stroke-dashoffset: 94.15; /* (1 - progress) * stroke-dasharray for 58% */
+  stroke-dasharray: 226.08;
+  stroke-dashoffset: 94.15;
   transition: stroke-dashoffset 0.5s ease-in-out;
 }
-
 .percentage {
   position: absolute;
   top: 50%;
@@ -122,7 +121,7 @@ svg {
 }
 .guideline-container {
   display: flex;
-  width: 1250px;
+  width: 1240px;
   height: 56px;
   gap: 10px;
   align-items: flex-start;
@@ -190,7 +189,7 @@ svg {
   font-weight: bold;
   font-size: 12px;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 19.2px;
   text-align: left;

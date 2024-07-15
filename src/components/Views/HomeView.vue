@@ -1,22 +1,14 @@
 <script setup>
 import NavBar from '../Tab/NavBar.vue'
 import TabMenu from '../Tab/TabMenu.vue'
+import GuideLine from '../ReadinessAssessment/GuideLine.vue'
 </script>
 <template>
   <main>
     <NavBar />
     <TabMenu />
-    <div class="origination">
-      <div class="title"><b>Welcome to InfraCredit Origination Platform</b></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <div class="title"><b>Transaction Customer Journey Map</b></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-      <div class="diagram">
-        <img src="../../assets/diagram.jpg" alt="">
-      </div>
-
+    <div class="originate">
+      <GuideLine />
       <div class="save"><button>Save and Continue</button></div>
 
       <div class="question">
@@ -37,7 +29,7 @@ main {
   overflow-x: hidden;
   background: #eee;
 }
-.origination {
+.originate {
   width: 1250px;
   height: 1000px;
   margin: 0 42px;
@@ -45,35 +37,14 @@ main {
   gap: 30px;
   border-radius: 10px 0px 0px 0px;
   opacity: 0px;
-  background: #fff;
-}
-.title {
-  width: 473px;
-  height: 29px;
-  gap: 0px;
-  opacity: 0px;
-}
-.title h3 {
-  font-family: Roboto;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 28.8px;
-  text-align: left;
-  color: #000000;
-}
-.origination p {
-  margin-top: 10px;
-}
-.diagram img {
-  width: 1210px;
-  padding-top: 20px;
+  background: #eee;
 }
 .save {
   width: 1380px;
   height: 50px;
   gap: 10px;
   opacity: 0px;
-  margin-top: 40px;
+  margin-top: 30px;
   justify-content: end;
 }
 .save button {
@@ -95,7 +66,7 @@ main {
   gap: 0px;
   justify-content: space-between;
   opacity: 0px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .support {
   width: 516px;
