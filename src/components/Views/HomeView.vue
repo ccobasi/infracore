@@ -4,6 +4,7 @@ import TabMenu from '../Tab/TabMenu.vue'
 import GuideLine from '../ReadinessAssessment/GuideLine.vue'
 import CorporateCompliance from '../ReadinessAssessment/CorporateCompliance.vue'
 import Legal from '../ReadinessAssessment/Legal.vue'
+import Technical from '../ReadinessAssessment/Technical.vue'
 </script>
 <template>
   <main>
@@ -11,7 +12,8 @@ import Legal from '../ReadinessAssessment/Legal.vue'
     <TabMenu />
     <!-- <GuideLine /> -->
     <!-- <CorporateCompliance /> -->
-    <Legal />
+    <!-- <Legal /> -->
+    <Technical />
 
     <div class="save">
       <button class="back-button">Back</button>
