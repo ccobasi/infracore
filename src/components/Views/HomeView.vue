@@ -2,22 +2,23 @@
 import NavBar from '../Tab/NavBar.vue'
 import TabMenu from '../Tab/TabMenu.vue'
 import GuideLine from '../ReadinessAssessment/GuideLine.vue'
+import CorporateCompliance from '../ReadinessAssessment/CorporateCompliance.vue'
 </script>
 <template>
   <main>
     <NavBar />
     <TabMenu />
-    <div class="originate">
-      <GuideLine />
-      <div class="save"><button>Save and Continue</button></div>
+    <!-- <GuideLine /> -->
+    <CorporateCompliance />
 
-      <div class="question">
-        <div class="support">
-          <label for="">For technical support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
-        </div>
-        <div class="frequent">
-          <button>Frequently Asked Questions</button>
-        </div>
+    <div class="save"><button>Save and Continue</button></div>
+
+    <div class="question">
+      <div class="support">
+        <label for="">For technical support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
+      </div>
+      <div class="frequent">
+        <button>Frequently Asked Questions</button>
       </div>
     </div>
 
@@ -67,6 +68,7 @@ main {
   justify-content: space-between;
   opacity: 0px;
   margin-top: 60px;
+  margin: auto;
 }
 .support {
   width: 516px;

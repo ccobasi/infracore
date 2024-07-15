@@ -19,8 +19,9 @@ html {
   overflow-x: hidden;
 }
 .origination {
-  max-width: 100%;
+  max-width: 93%;
   max-height: 100%;
+  margin: auto;
   padding: 30px;
   border-radius: 10px 0 0 0;
   background: #fff;
