@@ -122,14 +122,14 @@ svg {
 }
 .guideline-container {
   display: flex;
-  width: 1300px;
+  width: 1250px;
   height: 56px;
   gap: 10px;
   align-items: flex-start;
   padding: 0;
   list-style: none;
   position: relative;
-  margin: 4% 2.5%;
+  margin: 4% 4.5%;
 }
 
 .guideline-container::before {
