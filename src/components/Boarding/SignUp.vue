@@ -79,7 +79,7 @@ export default {
         <div class="top">
           <div class="text">
             <h3 class="gradient-text">InfraCore</h3>
-            <img src="../../assets/Group.png" alt="">
+            <img src="../../assets/Group2.png" alt="">
           </div>
         </div>
         <div class="centered">
@@ -88,8 +88,8 @@ export default {
           </div>
 
           <form action="">
-            <div class="first d-flex">
-              <div class="mb-3">
+            <div class="first d-flex mt-5">
+              <div class="mb-2">
                 <label for="exampleFormControlInput1" class="form-label">Business Name</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter full name">
               </div>
@@ -206,7 +206,7 @@ export default {
   border-radius: 30px;
 }
 .wrap {
-  padding: 0px 20px;
+  padding: 15px 30px;
 }
 .top {
   width: 597px;
@@ -249,10 +249,14 @@ export default {
   border: 1.5px 0px 0px 0px;
   opacity: 0px;
 }
+.mb-2 {
+  width: 295px;
+  margin-right: 10px;
+}
 select {
   width: 295px;
   height: 55px;
-
+  margin-right: 10px;
   gap: 12px;
   border-radius: 10px 0px 0px 0px solid #eeeeee;
   border: 1.5px 0px 0px 0px;
@@ -269,7 +273,7 @@ select {
   text-align: left;
 }
 .second input {
-  width: 600px;
+  width: 620px;
   height: 55px;
   padding: 20px 16px 20px 16px;
   gap: 12px;
@@ -305,6 +309,7 @@ select {
 }
 .loginElements {
   display: flex;
+  width: 620px;
   flex-direction: column;
   align-items: center;
   gap: 30px;
@@ -338,6 +343,7 @@ select {
 .loginBtn {
   display: flex;
   height: 50px;
+  width: 620px;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -345,7 +351,7 @@ select {
   align-self: stretch;
   border-radius: 30px;
   background: var(--Gradient, linear-gradient(90deg, #227cbf 0%, #47b65c 100%));
-  margin-left: 30px;
+  margin-left: 0px;
   margin-right: 30px;
 
   color: #fff;
@@ -364,7 +370,7 @@ select {
   display: flex;
   width: 250px;
   height: 28px;
-  margin-left: 30px;
+  margin-left: 0px;
   margin-top: 30px;
 }
 .account label {
@@ -418,7 +424,10 @@ select {
 .col img {
   margin-left: 40%;
 }
-
+.form-control::placeholder,
+.selected {
+  font-size: 12px;
+}
 @media (max-width: 1190px) {
   .Mainheader {
     width: 100%;

@@ -10,14 +10,44 @@ import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vu
 </script>
 <template>
   <main>
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Select Product Type</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Product Type</p>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Select</option>
+              <option value="1">Housing</option>
+              <option value="2">Mini Grid</option>
+              <option value="3">Power</option>
+              <option value="4">Transportation</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn save">Save</button>
+            <button type="button" class="btn cancel" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <NavBar />
     <TabMenu />
     <!-- <GuideLine /> -->
-    <!-- <CorporateCompliance /> -->
+    <CorporateCompliance />
     <!-- <Legal /> -->
     <!-- <Technical /> -->
     <!-- <EnvironmentalSocial /> -->
-    <FinancialInformation />
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Launch demo modal
+    </button> -->
+    <!-- <FinancialInformation /> -->
 
     <div class="save">
       <button class="back-button">Back</button>
@@ -130,5 +160,23 @@ main {
   font-weight: 400;
   line-height: 19.2px;
   text-align: left;
+}
+.btn .cancel {
+  width: 150px;
+  height: 35px;
+  padding: 10px 60px 10px 60px;
+  gap: 10px;
+  border-radius: 20px 0px 0px 0px;
+  opacity: 0px;
+  background: #eeeeee;
+}
+.btn .save {
+  width: 150px;
+  height: 35px;
+  padding: 10px 60px 10px 60px;
+  gap: 10px;
+  border-radius: 20px 0px 0px 0px;
+  opacity: 0px;
+  background: linear-gradient(90deg, #227cbf 0%, #47b65c 100%);
 }
 </style>

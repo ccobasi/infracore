@@ -85,7 +85,7 @@ export default {
         <span> Tunde Bakare </span>
       </div>
       <div class="logout">
-        <img src="../assets/images/frame67.svg" alt="">
+        <img src="../../assets/frame67.svg" alt="">
         <span @click="SignOut"> Logout </span>
       </div>
     </div>
