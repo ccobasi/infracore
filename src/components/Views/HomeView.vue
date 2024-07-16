@@ -40,7 +40,7 @@ import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vu
     <NavBar />
     <TabMenu />
     <!-- <GuideLine /> -->
-    <CorporateCompliance />
+    <!-- <CorporateCompliance /> -->
     <!-- <Legal /> -->
     <!-- <Technical /> -->
     <!-- <EnvironmentalSocial /> -->
@@ -86,7 +86,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   height: 50px;
   gap: 10px;
   opacity: 1;
@@ -108,13 +108,14 @@ main {
 
 .question {
   display: flex;
-  width: 1200px;
+  width: 1250px;
   height: 44px;
   gap: 0px;
   justify-content: space-between;
   opacity: 0px;
   margin-top: 40px;
-  margin: auto;
+  margin-bottom: 30px;
+  margin-left: 45px;
 }
 .support {
   width: 516px;
@@ -151,7 +152,7 @@ main {
   padding: 12px 16px 12px 16px;
   gap: 10px;
   border-radius: 10px;
-  border: 1px 0px 0px 0px;
+  border: 1px solid #227cbf;
   opacity: 0px;
 }
 .frequent button {

@@ -75,11 +75,10 @@ export default {
       <v-tab value="one" style="color:#808080;font-family: Roboto;font-size: 16px;font-style: normal;font-weight: 400;line-height: 19.2px;">Company Profile</v-tab>
 
     </v-tabs>
+
     <v-spacer></v-spacer>
     <div class="subheader d-flex align-center gap-4">
-      <v-badge content=2 color="green-darken-1">
-        <v-icon icon="mdi-bell-outline" size="large" />
-      </v-badge>
+
       <div class="avatar">
         <img src="../../assets/ellipse.png" alt="" class="profile-image">
         <span> Tunde Bakare </span>
@@ -106,7 +105,7 @@ export default {
 
 <style scoped>
 .pageheader {
-  width: 100vw;
+  width: 99vw;
   background: #fff;
   padding: 10px 30px;
 }

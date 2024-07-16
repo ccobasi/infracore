@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">45. Schedule of equipment suppliers and contractors, location, equipment supplied/​services to be providedUntitled</label>
+          <label for="">45. Schedule of equipment suppliers and contractors, location, equipment supplied/​services to be provided.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -26,7 +26,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">46. Original Equipment Manufacturer Track Record and CertificationsUntitled</label>
+          <label for="">46. Original Equipment Manufacturer Track Record and Certifications.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">47. Description of the mini grid system to be used and mode of operation with SLD</label>
+          <label for="">47. Description of the mini grid system to be used and mode of operation with SLD.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -46,7 +46,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">48. Details of the components and mini grid system sizing relative to the expected demand and reasonablenessUntitled</label>
+          <label for="">48. Details of the components and mini grid system sizing relative to the expected demand and reasonableness.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">49. Load Demand AnalysisUntitled</label>
+          <label for="">49. Load Demand Analysis.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -66,7 +66,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">50. Energy Yield Assessment ReportUntitled</label>
+          <label for="">50. Energy Yield Assessment Report.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">51. Minigrids Component Capacity Vs UtilizationUntitled</label>
+          <label for="">51. Minigrids Component Capacity Vs Utilization.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">53. Distribution Network Topology and Designs Review</label>
+          <label for="">53. Distribution Network Topology and Designs Review.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -106,7 +106,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">54. The scalability of the solutionUntitled</label>
+          <label for="">54. The scalability of the solution.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -115,7 +115,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">55. Project implementation planUntitled</label>
+          <label for="">55. Project implementation plan.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -126,7 +126,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">56. Distribution Network Topology and Designs documents</label>
+          <label for="">56. Distribution Network Topology and Designs documents.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">57. Detailed plan on connecting productive use of equipment operatorsUntitled</label>
+          <label for="">57. Detailed plan on connecting productive use of equipment operators.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -146,7 +146,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">58. Procurement ModelUntitled</label>
+          <label for="">58. Procurement Model.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -155,7 +155,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">59. Equipment sourcing approach (Local or International).Untitled</label>
+          <label for="">59. Equipment sourcing approach (Local or International).</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>

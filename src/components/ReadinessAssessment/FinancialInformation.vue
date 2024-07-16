@@ -6,7 +6,7 @@
     <div class="content">
       <div class="row">
         <div class="col-6">
-          <label for="">86. Copies of the Company's audited accounts and directors' reports for the last five financial years, a statement of accounting policies adopted in the audited accounts and management accounts and details of any changes in accounting policies</label>
+          <label for="">86. Copies of the Company's audited accounts and directors' reports for the last five financial years, a statement of accounting policies adopted in the audited accounts and management accounts and details of any changes in accounting policies.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">87. Financial Projections of the Company for, at least, the next ten (10) financial years, including the impact of the proposed debt finance to be guaranteed</label>
+          <label for="">87. Financial Projections of the Company for, at least, the next ten (10) financial years, including the impact of the proposed debt finance to be guaranteed.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -26,7 +26,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">88. Company procedures on revenue collections</label>
+          <label for="">88. Company procedures on revenue collections.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">89. Summary of bank accounts, listing bank names, balances, account signatories, approval limits and bank statements for the past three (3) months</label>
+          <label for="">89. Summary of bank accounts, listing bank names, balances, account signatories, approval limits and bank statements for the past three (3) months.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -46,7 +46,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">90. Receivables Aging Report, including details of any debts outstanding from customers which have been due for more than four weeks (where applicable)Untitled</label>
+          <label for="">90. Receivables Aging Report, including details of any debts outstanding from customers which have been due for more than four weeks (where applicable).</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -66,7 +66,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">92. Details and copies of the latest valuation and basis of valuation of all the assets</label>
+          <label for="">92. Details and copies of the latest valuation and basis of valuation of all the assets.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">93. Details of the Company’s current debt profile by type, purpose and maturity dates and copies of any offer letters and agreements in respect of existing borrowings including performance history</label>
+          <label for="">93. Details of the Company’s current debt profile by type, purpose and maturity dates and copies of any offer letters and agreements in respect of existing borrowings including performance history.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -86,7 +86,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">94. Details of funding sources being explored including debt, equity, grants and relevant documentation</label>
+          <label for="">94. Details of funding sources being explored including debt, equity, grants and relevant documentation.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">95. Details of all related party transactions including agreements and payments to/​from related parties</label>
+          <label for="">95. Details of all related party transactions including agreements and payments to/​from related parties.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -106,7 +106,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">96. Equipment financing plan including debt/​equity split, expected terms, details of any engagements with financiers</label>
+          <label for="">96. Equipment financing plan including debt/​equity split, expected terms, details of any engagements with financiers.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -115,7 +115,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">97. Financial Model of the minigrids</label>
+          <label for="">97. Financial Model of the minigrids.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -126,7 +126,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">98. Detailed breakdown of proposed utilisation of the proceeds of the debt issue/​financing and detailed CAPEX strategy</label>
+          <label for="">98. Detailed breakdown of proposed utilisation of the proceeds of the debt issue/​financing and detailed CAPEX strategy.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>

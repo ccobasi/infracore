@@ -7,7 +7,7 @@
     <div class="content">
       <div class="row">
         <div class="col-6">
-          <label for="">61. Environmental and Social/HSE Policy</label>
+          <label for="">61. Environmental and Social/HSE Policy.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">62. Environmental and Social Management System/HSE Manual</label>
+          <label for="">62. Environmental and Social Management System/HSE Manual.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -27,7 +27,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">63. Availability of experienced and competent HSE Officer</label>
+          <label for="">63. Availability of experienced and competent HSE Officer.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">64. E-waste Recycling Plan</label>
+          <label for="">64. E-waste Recycling Plan.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -47,7 +47,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">65. Project Land Acquisition Framework/plan (where applicable)</label>
+          <label for="">65. Project Land Acquisition Framework/plan (where applicable).</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">66. Occupational Health and Safety (OHS) Records (2- 3 years, where available)</label>
+          <label for="">66. Occupational Health and Safety (OHS) Records (2- 3 years, where available).</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -67,7 +67,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">67. Quality, Safety & Environmental Control measures undertaken by the Company such as: Untitled</label>
+          <label for="">67. Quality, Safety & Environmental Control measures undertaken by the Company such as:</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -76,7 +76,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">68. Stakeholder Engagement Plan</label>
+          <label for="">68. Stakeholder Engagement Plan.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -87,7 +87,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">69. Health, Safety, Environment, and Social (HSES) Legal Register</label>
+          <label for="">69. Health, Safety, Environment, and Social (HSES) Legal Register.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -96,7 +96,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">70. Emergency Response Plan</label>
+          <label for="">70. Emergency Response Plan.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -107,7 +107,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">71. Sustainable Procurement Plan</label>
+          <label for="">71. Sustainable Procurement Plan.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -116,7 +116,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">72. Contractor Management Procedure</label>
+          <label for="">72. Contractor Management Procedure.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -127,7 +127,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">73. Battery Recycling Policy</label>
+          <label for="">73. Battery Recycling Policy.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -136,7 +136,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">74. Anti-Corruption Policy/Anti-Money Laundering Policy</label>
+          <label for="">74. Anti-Corruption Policy/Anti-Money Laundering Policy.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -147,7 +147,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">75. Human Resources Policy and Procedures</label>
+          <label for="">75. Human Resources Policy and Procedures.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -156,7 +156,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">76. External Relations and Grievance Mechanism Policy/Plan</label>
+          <label for="">76. External Relations and Grievance Mechanism Policy/Plan.</label>
           <div class="radio">
             <input type="radio" id="Yes2" name="question2" value="Yes">
             <label for="Yes2">Yes</label>
@@ -167,7 +167,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">77. Relevant Environmental Permits/Licenses</label>
+          <label for="">77. Relevant Environmental Permits/Licenses.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -176,27 +176,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">78. PenCom Certificate</label>
-          <div class="radio">
-            <input type="radio" id="Yes1" name="question1" value="Yes">
-            <label for="Yes1">Yes</label>
-            <input type="radio" id="No1" name="question1" value="No">
-            <label for="No1">No</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <label for="">79. NSITF Certificate</label>
-          <div class="radio">
-            <input type="radio" id="Yes1" name="question1" value="Yes">
-            <label for="Yes1">Yes</label>
-            <input type="radio" id="No1" name="question1" value="No">
-            <label for="No1">No</label>
-          </div>
-        </div>
-        <div class="col-6">
-          <label for="">80. Sample Employment Contract (Junior/Senior)</label>
+          <label for="">78. PenCom Certificate.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -207,7 +187,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">81. Gender Policy</label>
+          <label for="">79. NSITF Certificate.</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -216,27 +196,7 @@
           </div>
         </div>
         <div class="col-6">
-          <label for="">82. Health, Safety Environment and Social (HSES) Training Plan</label>
-          <div class="radio">
-            <input type="radio" id="Yes1" name="question1" value="Yes">
-            <label for="Yes1">Yes</label>
-            <input type="radio" id="No1" name="question1" value="No">
-            <label for="No1">No</label>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <label for="">83. Security Risk Assessment Procedure/Security Management Plan</label>
-          <div class="radio">
-            <input type="radio" id="Yes1" name="question1" value="Yes">
-            <label for="Yes1">Yes</label>
-            <input type="radio" id="No1" name="question1" value="No">
-            <label for="No1">No</label>
-          </div>
-        </div>
-        <div class="col-6">
-          <label for="">84. GHG Inventory Procedure</label>
+          <label for="">80. Sample Employment Contract (Junior/Senior).</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
@@ -247,7 +207,47 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <label for="">85. Community Development Plan (where applicable)</label>
+          <label for="">81. Gender Policy.</label>
+          <div class="radio">
+            <input type="radio" id="Yes1" name="question1" value="Yes">
+            <label for="Yes1">Yes</label>
+            <input type="radio" id="No1" name="question1" value="No">
+            <label for="No1">No</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="">82. Health, Safety Environment and Social (HSES) Training Plan.</label>
+          <div class="radio">
+            <input type="radio" id="Yes1" name="question1" value="Yes">
+            <label for="Yes1">Yes</label>
+            <input type="radio" id="No1" name="question1" value="No">
+            <label for="No1">No</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label for="">83. Security Risk Assessment Procedure/Security Management Plan.</label>
+          <div class="radio">
+            <input type="radio" id="Yes1" name="question1" value="Yes">
+            <label for="Yes1">Yes</label>
+            <input type="radio" id="No1" name="question1" value="No">
+            <label for="No1">No</label>
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="">84. GHG Inventory Procedure.</label>
+          <div class="radio">
+            <input type="radio" id="Yes1" name="question1" value="Yes">
+            <label for="Yes1">Yes</label>
+            <input type="radio" id="No1" name="question1" value="No">
+            <label for="No1">No</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label for="">85. Community Development Plan (where applicable).</label>
           <div class="radio">
             <input type="radio" id="Yes1" name="question1" value="Yes">
             <label for="Yes1">Yes</label>
