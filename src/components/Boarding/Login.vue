@@ -79,7 +79,7 @@ export default {
         <div class="top">
           <div class="text">
             <h3 class="gradient-text">InfraCore</h3>
-            <img src="../../assets/Group.png" alt="">
+            <img src="../../assets/Group2.png" alt="">
           </div>
         </div>
         <div class="centered">
@@ -153,7 +153,7 @@ export default {
   border-radius: 30px;
 }
 .wrap {
-  padding: 0px 20px;
+  padding: 15px 20px;
 }
 .top {
   width: 597px;
@@ -294,6 +294,7 @@ select {
 
 .loginBtn {
   display: flex;
+  width: 600px;
   height: 50px;
   padding: 10px;
   justify-content: center;
@@ -302,7 +303,7 @@ select {
   align-self: stretch;
   border-radius: 30px;
   background: var(--Gradient, linear-gradient(90deg, #227cbf 0%, #47b65c 100%));
-  margin-left: 30px;
+  margin-left: 0px;
   margin-right: 30px;
 
   color: #fff;
@@ -321,7 +322,7 @@ select {
   display: flex;
   width: 250px;
   height: 28px;
-  margin-left: 30px;
+  margin-left: 0px;
   margin-top: 30px;
 }
 .account label {
@@ -347,7 +348,7 @@ select {
   height: 15px;
   gap: 0px;
   opacity: 0px;
-  margin-top: 40%;
+  margin-top: 30%;
 }
 .support label {
   font-family: Roboto;
