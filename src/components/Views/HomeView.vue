@@ -7,6 +7,7 @@ import Legal from '../ReadinessAssessment/Legal.vue'
 import Technical from '../ReadinessAssessment/Technical.vue'
 import EnvironmentalSocial from '../ReadinessAssessment/EnvironmentalSocial.vue'
 import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vue'
+import FrequentButtonVue from '../ReadinessAssessment/FrequentButton.vue'
 </script>
 <template>
   <main>
@@ -58,9 +59,10 @@ import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vu
       <div class="support">
         <label for="">For technical support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
       </div>
-      <div class="frequent">
+      <!-- <div class="frequent">
         <button>Frequently Asked Questions</button>
-      </div>
+      </div> -->
+      <FrequentButtonVue />
     </div>
 
   </main>
@@ -104,6 +106,10 @@ main {
   border: none;
   cursor: pointer;
   margin-top: 20px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.2px;
 }
 
 .question {
