@@ -39,7 +39,7 @@ import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vu
     </div> -->
     <NavBar />
     <TabMenu />
-    <!-- <GuideLine /> -->
+    <GuideLine />
     <!-- <CorporateCompliance /> -->
     <!-- <Legal /> -->
     <!-- <Technical /> -->
