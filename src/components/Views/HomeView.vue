@@ -9,27 +9,7 @@ import EnvironmentalSocial from '../ReadinessAssessment/EnvironmentalSocial.vue'
 import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vue'
 import FrequentButtonVue from '../ReadinessAssessment/FrequentButton.vue'
 import { ref } from 'vue';
-// import { useGuidelineState } from '../ReadinessAssessment/useGuidelineState';
 
-// const { guidelineItems } = useGuidelineState();
-
-// const saveAndContinue = () => {
-//   if (guidelineItems.value.length > 1) {
-//     const firstItem = guidelineItems.value[0];
-//     const nextItem = guidelineItems.value[1];
-
-//     nextItem.padding = firstItem.padding;
-//     nextItem.clipPath = firstItem.clipPath;
-//     nextItem.background = firstItem.background;
-//     nextItem.color = firstItem.color;
-
-//     nextItem.scoreBackground = firstItem.scoreBackground;
-//     nextItem.scoreWidth = firstItem.scoreWidth;
-//     nextItem.scoreColor = firstItem.scoreColor;
-//     nextItem.scoreBorderRadius = firstItem.scoreBorderRadius;
-//     nextItem.scorePadding = firstItem.scorePadding;
-//   }
-// };
 const currentStep = ref(0);
 const steps = [
   GuideLine,
@@ -91,8 +71,8 @@ const goBack = () => {
     </button> -->
 
     <div class="save">
-      <button class="back-button" @click="currentStep > 0 && currentStep--">Back</button>
-      <button class="save-button" @click="saveAndContinue">Save and Continue</button>
+      <button v-if="currentStep > 0" class="back-button" @click="currentStep > 0 && currentStep--">Back</button>
+      <button :class="{ 'save-button-right': currentStep === 0 }" class="save-button" @click="saveAndContinue">Save and Continue</button>
     </div>
 
     <div class="question">
@@ -223,5 +203,8 @@ main {
   border-radius: 20px 0px 0px 0px;
   opacity: 0px;
   background: linear-gradient(90deg, #227cbf 0%, #47b65c 100%);
+}
+.save-button-right {
+  margin-left: 1050px;
 }
 </style>
