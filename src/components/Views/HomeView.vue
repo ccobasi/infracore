@@ -8,6 +8,49 @@ import Technical from '../ReadinessAssessment/Technical.vue'
 import EnvironmentalSocial from '../ReadinessAssessment/EnvironmentalSocial.vue'
 import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vue'
 import FrequentButtonVue from '../ReadinessAssessment/FrequentButton.vue'
+import { ref } from 'vue';
+// import { useGuidelineState } from '../ReadinessAssessment/useGuidelineState';
+
+// const { guidelineItems } = useGuidelineState();
+
+// const saveAndContinue = () => {
+//   if (guidelineItems.value.length > 1) {
+//     const firstItem = guidelineItems.value[0];
+//     const nextItem = guidelineItems.value[1];
+
+//     nextItem.padding = firstItem.padding;
+//     nextItem.clipPath = firstItem.clipPath;
+//     nextItem.background = firstItem.background;
+//     nextItem.color = firstItem.color;
+
+//     nextItem.scoreBackground = firstItem.scoreBackground;
+//     nextItem.scoreWidth = firstItem.scoreWidth;
+//     nextItem.scoreColor = firstItem.scoreColor;
+//     nextItem.scoreBorderRadius = firstItem.scoreBorderRadius;
+//     nextItem.scorePadding = firstItem.scorePadding;
+//   }
+// };
+const currentStep = ref(0);
+const steps = [
+  GuideLine,
+  CorporateCompliance,
+  Legal,
+  Technical,
+  EnvironmentalSocial,
+  FinancialInformation
+];
+
+const saveAndContinue = () => {
+  if (currentStep.value < steps.length - 1) {
+    currentStep.value++;
+  }
+};
+
+const goBack = () => {
+  if (currentStep.value > 0) {
+    currentStep.value--;
+  }
+};
 </script>
 <template>
   <main>
@@ -39,29 +82,24 @@ import FrequentButtonVue from '../ReadinessAssessment/FrequentButton.vue'
       </div>
     </div> -->
     <NavBar />
-    <TabMenu />
-    <GuideLine />
-    <!-- <CorporateCompliance /> -->
-    <!-- <Legal /> -->
-    <!-- <Technical /> -->
-    <!-- <EnvironmentalSocial /> -->
+    <!-- <TabMenu /> -->
+    <TabMenu :currentStep="currentStep" />
+    <component :is="steps[currentStep]" />
+
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
       Launch demo modal
     </button> -->
-    <!-- <FinancialInformation /> -->
 
     <div class="save">
-      <button class="back-button">Back</button>
-      <button class="save-button">Save and Continue</button>
+      <button class="back-button" @click="currentStep > 0 && currentStep--">Back</button>
+      <button class="save-button" @click="saveAndContinue">Save and Continue</button>
     </div>
 
     <div class="question">
       <div class="support">
         <label for="">For technical support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
       </div>
-      <!-- <div class="frequent">
-        <button>Frequently Asked Questions</button>
-      </div> -->
+
       <FrequentButtonVue />
     </div>
 
