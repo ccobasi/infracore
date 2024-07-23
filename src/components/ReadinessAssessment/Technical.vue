@@ -255,11 +255,11 @@ html {
   margin-bottom: 10px;
   font-family: inherit, sans-serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: #000;
 }
 .title p {
-  font-family: inherit;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -283,11 +283,12 @@ html {
   flex: 1;
   padding: 10px;
 }
-.col-6 label {
+.col-6 label,
+h4 {
   display: block;
-  font-family: inherit;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 19.2px;
   text-align: left;
 }
