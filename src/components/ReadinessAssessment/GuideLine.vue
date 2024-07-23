@@ -31,19 +31,20 @@ html {
   background: #fff;
   overflow-y: hidden;
 }
-.title {
+.title,
+.title b {
   margin-bottom: 10px;
-  font-family: Roboto, sans-serif;
+  font-family: inherit, sans-serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 900;
   color: #000;
 }
 .origination p {
   margin-top: 10px;
-  color: #808080;
-  font-family: Roboto;
+  color: #000;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 19.2px;
   text-align: left;
 }

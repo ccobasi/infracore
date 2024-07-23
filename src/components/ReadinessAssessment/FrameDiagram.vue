@@ -16,22 +16,7 @@ const steps = [
 
 <template>
   <div class="frame">
-    <!-- <div class="overlap">
-      <img class="vector" />
-      <div class="div">
-        <div class="div-2" v-for="(item, index) in steps" :key="index">
-          <div class="div-3">
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group">
-                <div class="text-wrapper">{{ index + 1 }}</div>
-              </div>
-            </div>
-            <div :class="`text-wrapper-${index === 0 ? '2' : '3'}`">{{ item.title }}</div>
-            <p class="p">{{ item.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
+
     <div class="overlap">
       <img class="vector" src="../../assets/Vector 1.svg" alt="journey map" />
       <div class="div">
@@ -185,37 +170,38 @@ a {
   --primary500-base: rgba(16, 93, 251, 1);
   --gray-900: rgba(24, 24, 27, 1);
   --gray-500: rgba(113, 113, 122, 1);
-  --h4-font-family: 'Roboto', Helvetica;
+  --h4-font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --h4-font-weight: 400;
   --h4-font-size: 20px;
   --h4-letter-spacing: 0px;
   --h4-line-height: 24px;
   --h4-font-style: normal;
-  --h3-font-family: 'Roboto', Helvetica;
+  --h3-font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --h3-font-weight: 400;
   --h3-font-size: 24px;
   --h3-letter-spacing: 0px;
   --h3-line-height: 28.799999237060547px;
   --h3-font-style: normal;
-  --h2-font-family: 'Roboto', Helvetica;
+  --h2-font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --h2-font-weight: 400;
   --h2-font-size: 36px;
   --h2-letter-spacing: 0px;
   --h2-line-height: 43.20000076293945px;
   --h2-font-style: normal;
-  --caption-font-family: 'Roboto', Helvetica;
+  --caption-font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --caption-font-weight: 400;
   --caption-font-size: 12px;
   --caption-letter-spacing: 0px;
   --caption-line-height: 14.399999618530273px;
   --caption-font-style: normal;
-  --body-text-font-family: 'Roboto', Helvetica;
+  --body-text-font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --body-text-font-weight: 400;
   --body-text-font-size: 16px;
   --body-text-letter-spacing: 0px;
   --body-text-line-height: 19.200000762939453px;
   --body-text-font-style: normal;
-  --text-sm-semibold-font-family: 'Inter', Helvetica;
+  --text-sm-semibold-font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
   --text-sm-semibold-font-weight: 600;
   --text-sm-semibold-font-size: 14px;
   --text-sm-semibold-letter-spacing: -0.05000000074505806px;
@@ -294,7 +280,7 @@ a {
 
 .frame .text-wrapper {
   position: absolute;
-  top: 11px;
+  top: 17px;
   left: 17px;
   font-family: var(--h4-font-family);
   font-weight: var(--h4-font-weight);
@@ -312,8 +298,8 @@ a {
   width: fit-content;
   margin-left: -25.5px;
   margin-right: -25.5px;
-  font-family: 'Roboto-Regular', Helvetica;
-  font-weight: 400;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -325,7 +311,7 @@ a {
 .frame .p {
   position: relative;
   align-self: stretch;
-  font-family: var(--caption-font-family);
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: var(--caption-font-weight);
   color: #000000;
   font-size: var(--caption-font-size);
@@ -338,8 +324,8 @@ a {
 .frame .text-wrapper-3 {
   position: relative;
   width: fit-content;
-  font-family: 'Roboto-Regular', Helvetica;
-  font-weight: 400;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -353,8 +339,8 @@ a {
   margin-right: -3px;
   position: relative;
   width: fit-content;
-  font-family: 'Roboto-Regular', Helvetica;
-  font-weight: 400;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -368,8 +354,8 @@ a {
   width: fit-content;
   margin-left: -19px;
   margin-right: -19px;
-  font-family: 'Roboto-Regular', Helvetica;
-  font-weight: 400;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -383,8 +369,8 @@ a {
   width: fit-content;
   margin-left: -27px;
   margin-right: -27px;
-  font-family: 'Roboto-Regular', Helvetica;
-  font-weight: 400;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -395,8 +381,8 @@ a {
 
 .frame .text-wrapper-6 {
   position: absolute;
-  top: 11px;
-  left: 12px;
+  top: 17px;
+  left: 13px;
   font-family: var(--h4-font-family);
   font-weight: var(--h4-font-weight);
   color: #000000;
