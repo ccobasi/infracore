@@ -10,6 +10,7 @@ const props = defineProps({
 
 const corporateComplianceScore = computed(() => store.sectionScore('corporateCompliance'));
 const legalScore = computed(() => store.sectionScore('legal'));
+const technicalScore = computed(() => store.sectionScore('technical'));
 // Add other sections if needed
 // const technicalScore = computed(() => store.sectionScore('technical'));
 // const environmentalSocialScore = computed(() => store.sectionScore('environmentalSocial'));
@@ -20,7 +21,7 @@ const guidelineItems = computed(() => [
   { title: 'Guideline', score: 'Score' },
   { title: 'Corporate & Compliance', score: `${corporateComplianceScore.value.toFixed(2)}%` },
   { title: 'Legal', score: `${legalScore.value.toFixed(2)}%` },
-  { title: 'Technical', score: '0%' },
+  { title: 'Technical', score: `${technicalScore.value.toFixed(2)}%` },
   { title: 'Environmental & Social', score: '0%' },
   { title: 'Financial Information', score: '0%' }
 ]);

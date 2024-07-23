@@ -30,18 +30,13 @@ const questions = [
 "A schedule of all threatened or pending claims, arbitration, litigation, administrative or regulatory proceedings and investigations or hearings or any other governmental action in which the Company is involved including a brief summary and status report for each such matter showing the parties, issues for determination, the amount involved, an estimate of potential liability in case of an unfavourable outcome or decision and the response of the Company to the case - independent solicitor’s opinion on such claims and litigations to be provided.",
 "Resolution of the Board of Directors of the Company in respect of the Transaction.",
 "Key documentation related to the core project (agreements, EPC and other sub-contracts etc.).",
-"A copy of either executed, draft or an agreed form of Engineering, Procurement and Construction contracts (if applicable)."
+"A copy of either executed, draft or an agreed form of Engineering, Procurement and Construction contracts (if applicable).",
+"A copy of either executed, draft or an agreed form of Operation and Maintenance contracts (if applicable)"
 
 ];
 
 const score = computed(() => store.sectionScore('legal'));
-// const questionPairs = computed(() => {
-//   const pairs = [];
-//   for (let i = 0; i < questions.length; i += 2) {
-//     pairs.push(questions.slice(i, i + 2).map((text, index) => ({ text, index: i + index + 1 })));
-//   }
-//   return pairs;
-// });
+
 
 const questionPairs = computed(() => {
   const pairs = [];

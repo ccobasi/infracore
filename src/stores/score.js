@@ -45,12 +45,36 @@ export const useAnswersStore = defineStore('answers', () => {
     question39: null,
     question40: null,
     question41: null,
-    question42: null
+    question42: null,
+    question43: null,
+    question44: null,
+    question45: null,
+    question46: null,
+    question47: null,
+    question48: null,
+    question49: null,
+    question50: null,
+    question51: null,
+    question52: null,
+    question53: null,
+    question54: null,
+    question55: null,
+    question56: null,
+    question57: null,
+    question58: null,
+    question59: null,
+    question60: null,
   });
 
   const sections = {
     corporateCompliance: ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13', 'question14', 'question15', 'question16'],
-    legal: ['question17', 'question18', 'question19', 'question20', 'question21', 'question22', 'question23', 'question24', 'question25', 'question26', 'question27', 'question28', 'question29', 'question30', 'question31', 'question32', 'question33', 'question34', 'question35', 'question36', 'question37', 'question38', 'question39', 'question40', 'question41', 'question42']
+    legal: ['question17', 'question18', 'question19', 'question20', 'question21', 'question22', 'question23', 'question24', 'question25', 'question26', 'question27', 'question28', 'question29', 'question30', 'question31', 'question32', 'question33', 'question34', 'question35', 'question36', 'question37', 'question38', 'question39', 'question40', 'question41', 'question42', 'question43'],
+    technical: [
+      'question44', 'question45', 'question46', 'question47', 'question48',
+      'question49', 'question50', 'question51', 'question52', 'question53',
+      'question54', 'question55', 'question56', 'question57', 'question58',
+      'question59', 'question60'
+    ],
   };
 
   const sectionScore = (section) => {
@@ -75,6 +99,7 @@ export const useAnswersStore = defineStore('answers', () => {
     console.log(`Total Yes: ${totalYes.value}, Percentage: ${percentage.value}%`);
     console.log(`Corporate Compliance Score: ${sectionScore('corporateCompliance')}`);
     console.log(`Legal Section Score: ${sectionScore('legal')}`);
+    console.log(`Technical Section Score: ${sectionScore('technical')}`);
   };
 
   return {

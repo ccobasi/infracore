@@ -1,236 +1,70 @@
+<script setup>
+import { useAnswersStore } from '../../stores/score';
+import { computed } from 'vue';
+
+const store = useAnswersStore();
+
+const questions = [
+  "A copy of either executed, draft or an agreed form of Original Equipment Manufacturer contracts for all components including Solar PV, Battery Energy Storage System, etc.",
+  "Schedule of equipment suppliers and contractors, location, equipment supplied/​services to be provided.",
+  "Original Equipment Manufacturer Track Record and Certifications.",
+  "Description of the mini grid system to be used and mode of operation with SLD.",
+  "Details of the components and mini grid system sizing relative to the expected demand and reasonableness.",
+  "Load Demand Analysis.",
+"Energy Yield Assessment Report.",
+"Minigrids Component Capacity Vs Utilization.",
+"Equipment Data specification sheets from the Original Equipment Manufacturer (OEM).",
+"Distribution Network Topology and Designs Review.",
+"The scalability of the solution.",
+"Project implementation plan.",
+"Distribution Network Topology and Designs documents.",
+"Detailed plan on connecting productive use of equipment operators.",
+"Procurement Model.",
+"Equipment sourcing approach (Local or International).",
+"Future projects with regards to expansion plans and integration plans including project summaries.",
+
+
+];
+
+const score = computed(() => store.sectionScore('technical'));
+
+
+const questionPairs = computed(() => {
+  const pairs = [];
+  const startIndex = 44;
+  for (let i = 0; i < questions.length; i += 2) {
+    pairs.push(questions.slice(i, i + 2).map((text, index) => ({ text, index: startIndex + i + index })));
+  }
+  return pairs;
+});
+
+</script>
 <template>
   <div class="origination">
     <div class="title">
       <h3>Technical</h3>
     </div>
     <div class="content">
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">44.</label>
+      <div class="row" v-for="(questionPair, rowIndex) in questionPairs" :key="rowIndex">
+        <div class="col-6 d-flex" v-for="(question, questionIndex) in questionPair" :key="questionIndex">
+          <label class="mr-3">{{ question.index }}. </label>
           <div class="align">
-            <h4>A copy of either executed, draft or an agreed form of Original Equipment Manufacturer contracts for all components including Solar PV, Battery Energy Storage System, etc.</h4>
+            <h4>{{ question.text }}</h4>
             <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">45.</label>
-          <div class="align">
-            <h4>Schedule of equipment suppliers and contractors, location, equipment supplied/​services to be provided.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
+              <input :type="'radio'" :id="'Yes' + question.index" :name="'question' + question.index" value="1" v-model="store.answers['question' + question.index]">
+              <label :for="'Yes' + question.index">Yes</label>
+              <input :type="'radio'" :id="'No' + question.index" :name="'question' + question.index" value="0" v-model="store.answers['question' + question.index]">
+              <label :for="'No' + question.index">No</label>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">46.</label>
-          <div class="align">
-            <h4>Original Equipment Manufacturer Track Record and Certifications.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">47.</label>
-          <div class="align">
-            <h4>Description of the mini grid system to be used and mode of operation with SLD.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
+        <!-- <div class="col-6">
+          <button @click="store.evaluateAnswers">Evaluate</button>
+          <p>Total Yes: {{ store.totalYes }}, Percentage: {{ store.percentage }}%</p>
+        </div> -->
       </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">48.</label>
-          <div class="align">
-            <h4>Details of the components and mini grid system sizing relative to the expected demand and reasonableness.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">49. </label>
-          <div class="align">
-            <h4>Load Demand Analysis.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">50. </label>
-          <div class="align">
-            <h4>Energy Yield Assessment Report.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">51. </label>
-          <div class="align">
-            <h4>Minigrids Component Capacity Vs Utilization.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">52. </label>
-          <div class="align">
-            <h4>Equipment Data specification sheets from the Original Equipment Manufacturer (OEM).</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">53. </label>
-          <div class="align">
-            <h4>Distribution Network Topology and Designs Review.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">54. </label>
-          <div class="align">
-            <h4>The scalability of the solution.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">55. </label>
-          <div class="align">
-            <h4>Project implementation plan.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">56. </label>
-          <div class="align">
-            <h4>Distribution Network Topology and Designs documents.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">57. </label>
-          <div class="align">
-            <h4>Detailed plan on connecting productive use of equipment operators.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">58. </label>
-          <div class="align">
-            <h4>Procurement Model.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">59. </label>
-          <div class="align">
-            <h4>Equipment sourcing approach (Local or International).</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">60. </label>
-          <div class="align">
-            <h4>Future projects with regards to expansion plans and integration plans including project summaries</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <label class="mr-3"></label>
-
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
