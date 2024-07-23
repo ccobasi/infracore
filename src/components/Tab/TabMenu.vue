@@ -8,11 +8,18 @@ const props = defineProps({
   currentStep: Number
 });
 
+const corporateComplianceScore = computed(() => store.sectionScore('corporateCompliance'));
+const legalScore = computed(() => store.sectionScore('legal'));
+// Add other sections if needed
+// const technicalScore = computed(() => store.sectionScore('technical'));
+// const environmentalSocialScore = computed(() => store.sectionScore('environmentalSocial'));
+// const financialInformationScore = computed(() => store.sectionScore('financialInformation'));
+
 
 const guidelineItems = computed(() => [
   { title: 'Guideline', score: 'Score' },
-  { title: 'Corporate & Compliance', score: '0%' },
-  { title: 'Legal', score: '0%' },
+  { title: 'Corporate & Compliance', score: `${corporateComplianceScore.value.toFixed(2)}%` },
+  { title: 'Legal', score: `${legalScore.value.toFixed(2)}%` },
   { title: 'Technical', score: '0%' },
   { title: 'Environmental & Social', score: '0%' },
   { title: 'Financial Information', score: '0%' }
@@ -26,11 +33,8 @@ const getClass = (index) => {
   }
 };
 
-// const getClass = (index) => {
-//   return index <= props.currentStep ? 'guideline-item complete' : 'guideline-item';
-// };
-
 const percentage = computed(() => `${store.percentage}%`);
+// const percentage = computed(() => `${store.percentage.value.toFixed(2)}%`);
 </script>
 <template>
   <div class="body">
@@ -51,8 +55,7 @@ const percentage = computed(() => `${store.percentage}%`);
     <div class="guideline-container">
       <div v-for="(item, index) in guidelineItems" :key="index" :class="getClass(index)">
         <div class="guideline-title">{{ item.title }}</div>
-        <!-- <div class="guideline-score">{{ item.score }}</div> -->
-        <div class="guideline-score">{{ index === 1 ? percentage : item.score }}</div>
+        <div class="guideline-score">{{ item.score }}</div>
       </div>
     </div>
 
