@@ -77,7 +77,7 @@ const goBack = () => {
 
     <div class="question">
       <div class="support">
-        <label for="">For technical support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
+        <label for="">For Technical Support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
       </div>
 
       <FrequentButtonVue />
@@ -123,8 +123,8 @@ main {
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 20px;
-  font-family: Roboto;
+  margin-top: 0px;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 19.2px;
@@ -149,14 +149,14 @@ main {
   margin-top: 10px;
 }
 .support label {
-  font-family: Roboto;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.4px;
   text-align: left;
 }
 .num {
-  font-family: Roboto;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 14.4px;
@@ -164,7 +164,7 @@ main {
   color: #47b65c;
 }
 .whatsapp {
-  font-family: Roboto;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.4px;
@@ -180,7 +180,7 @@ main {
   opacity: 0px;
 }
 .frequent button {
-  font-family: Roboto;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -205,6 +205,6 @@ main {
   background: linear-gradient(90deg, #227cbf 0%, #47b65c 100%);
 }
 .save-button-right {
-  margin-left: 1050px;
+  margin-left: 1078px;
 }
 </style>

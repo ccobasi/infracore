@@ -234,9 +234,9 @@ html {
 }
 .title {
   margin-bottom: 10px;
-  font-family: Roboto, sans-serif;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif, sans-serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 700;
   color: #000;
 }
 .content {
@@ -255,11 +255,12 @@ html {
   flex: 1;
   padding: 10px;
 }
-.col-6 label {
+.col-6 label,
+h4 {
   display: block;
-  font-family: Roboto;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 19.2px;
   text-align: left;
 }
