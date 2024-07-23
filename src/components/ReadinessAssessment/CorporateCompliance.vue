@@ -1,48 +1,105 @@
 <script setup>
-import { reactive, computed } from 'vue';
+// import { reactive, computed } from 'vue';
 
-const answers = reactive({
-  question1: null,
-  question2: null,
-  question3: null,
-  question4: null,
-  question5: null,
-  question6: null,
-  question7: null,
-  question8: null,
-  question9: null,
-  question10: null,
-  question11: null,
-  question12: null,
-  question13: null,
-  question14: null,
-  question15: null,
-  question16: null,
+
+// const answers = reactive({
+//   question1: null,
+//   question2: null,
+//   question3: null,
+//   question4: null,
+//   question5: null,
+//   question6: null,
+//   question7: null,
+//   question8: null,
+//   question9: null,
+//   question10: null,
+//   question11: null,
+//   question12: null,
+//   question13: null,
+//   question14: null,
+//   question15: null,
+//   question16: null,
+// });
+
+// const totalYes = computed(() => {
+//   return Object.values(answers).reduce((sum, val) => sum + (val === '1' ? 1 : 0), 0);
+// });
+
+// const totalQuestions = computed(() => {
+//   return Object.keys(answers).length;
+// });
+
+// const percentage = computed(() => {
+//   return totalQuestions.value > 0 ? (totalYes.value / totalQuestions.value) * 100 : 0;
+// });
+
+// const evaluateAnswers = () => {
+//   // This function can include additional logic if needed
+//   console.log(`Total Yes: ${totalYes.value}, Percentage: ${percentage.value}%`);
+// };
+import { computed } from 'vue';
+import { useAnswersStore } from '../../stores/score';
+
+const store = useAnswersStore();
+
+const questions = [
+  "Summary of the history of the Business from incorporation to date.",
+  "Copy of Certificate of Incorporation, Memorandum and Articles of Association, most recent CAC7 (Directors) and CAC2 (Shareholding).",
+  "Copy of Incorporation Documents of any SPV in relation to the project (if applicable).",
+  "Profiles of all shareholders holding at least 5.0% interest in the Company.",
+  "Details of any subsidiary or associated companies of the Company together with details of the relationship and the Company’s shareholding in such entities.",
+  "Details and copies of all share subscription agreements, shareholder agreements, voting agreements and other relevant agreements governing the relationship of the Company's shareholders that is material to the Business or Assets.",
+  "Profile of Directors, Senior Management and Company Secretary (e.g. work experience, schools attended, degrees obtained, other qualifications).",
+  "Organisation Chart that includes: Staff Strength of the Business.",
+  "Organisation Chart that includes: Business Permit and Expatriate Quota (where the Company has foreign (non-Nigerian) shareholding).",
+  "Promoter And Technical Team’s Profile and competencies.",
+  "Details of all business location.",
+  "Summary of lines of business.",
+  "Details and status of key projects (completed, on-going, expected completion dates etc.).",
+  "Company policies on operations and maintenance.",
+  "Company policies on procurement and supply chain.",
+  "Details of internal controls, invoicing/credit policies, operational procedures, internal audit and compliance function."
+];
+
+// Create pairs of questions
+const questionPairs = computed(() => {
+  const pairs = [];
+  for (let i = 0; i < questions.length; i += 2) {
+    pairs.push(questions.slice(i, i + 2).map((text, index) => ({ text, index: i + index + 1 })));
+  }
+  return pairs;
 });
-
-const totalYes = computed(() => {
-  return Object.values(answers).reduce((sum, val) => sum + (val === '1' ? 1 : 0), 0);
-});
-
-const totalQuestions = computed(() => {
-  return Object.keys(answers).length;
-});
-
-const percentage = computed(() => {
-  return totalQuestions.value > 0 ? (totalYes.value / totalQuestions.value) * 100 : 0;
-});
-
-const evaluateAnswers = () => {
-  // This function can include additional logic if needed
-  console.log(`Total Yes: ${totalYes.value}, Percentage: ${percentage.value}%`);
-};
 </script>
 <template>
   <div class="origination">
     <div class="title">
       <h3>Corporate and Compliance</h3>
     </div>
+
     <div class="content">
+      <div class="row" v-for="(questionPair, rowIndex) in questionPairs" :key="rowIndex">
+        <div class="col-6 d-flex" v-for="(question, questionIndex) in questionPair" :key="questionIndex">
+          <label class="mr-3">{{ rowIndex * 2 + questionIndex + 1 }}. </label>
+          <div class="align">
+            <h4>{{ question.text }}</h4>
+            <div class="radio">
+              <input :type="'radio'" :id="'Yes' + (rowIndex * 2 + questionIndex + 1)" :name="'question' + (rowIndex * 2 + questionIndex + 1)" value="1" v-model="store.answers['question' + (rowIndex * 2 + questionIndex + 1)]">
+              <label :for="'Yes' + (rowIndex * 2 + questionIndex + 1)">Yes</label>
+              <input :type="'radio'" :id="'No' + (rowIndex * 2 + questionIndex + 1)" :name="'question' + (rowIndex * 2 + questionIndex + 1)" value="0" v-model="store.answers['question' + (rowIndex * 2 + questionIndex + 1)]">
+              <label :for="'No' + (rowIndex * 2 + questionIndex + 1)">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button @click="store.evaluateAnswers">Evaluate</button>
+          <p>Total Yes: {{ store.totalYes }}, Percentage: {{ store.percentage }}%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="content">
       <div class="row">
         <div class="col-6 d-flex">
           <label class="mr-3">1. </label>
@@ -256,9 +313,10 @@ const evaluateAnswers = () => {
         <div class="col-6">
           <button @click="evaluateAnswers">Evaluate</button>
           <p>Total Yes: {{ totalYes }}, Percentage: {{ percentage }}%</p>
+
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

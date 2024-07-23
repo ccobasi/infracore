@@ -9,6 +9,7 @@ import EnvironmentalSocial from '../ReadinessAssessment/EnvironmentalSocial.vue'
 import FinancialInformation from '../ReadinessAssessment/FinancialInformation.vue'
 import FrequentButtonVue from '../ReadinessAssessment/FrequentButton.vue'
 import { ref } from 'vue';
+import { useAnswersStore } from '../../stores/score';
 
 const currentStep = ref(0);
 const steps = [
@@ -31,6 +32,8 @@ const goBack = () => {
     currentStep.value--;
   }
 };
+
+const store = useAnswersStore();
 </script>
 <template>
   <main>
@@ -63,7 +66,7 @@ const goBack = () => {
     </div> -->
     <NavBar />
     <!-- <TabMenu /> -->
-    <TabMenu :currentStep="currentStep" />
+    <TabMenu :currentStep="currentStep" :percentage="store.percentage" />
     <component :is="steps[currentStep]" />
 
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">

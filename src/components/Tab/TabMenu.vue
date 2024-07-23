@@ -1,9 +1,13 @@
 <script setup>
 import { computed } from 'vue';
+import { useAnswersStore } from '../../stores/score';
+
+const store = useAnswersStore();
 
 const props = defineProps({
   currentStep: Number
 });
+
 
 const guidelineItems = computed(() => [
   { title: 'Guideline', score: 'Score' },
@@ -22,6 +26,11 @@ const getClass = (index) => {
   }
 };
 
+// const getClass = (index) => {
+//   return index <= props.currentStep ? 'guideline-item complete' : 'guideline-item';
+// };
+
+const percentage = computed(() => `${store.percentage}%`);
 </script>
 <template>
   <div class="body">
@@ -42,7 +51,8 @@ const getClass = (index) => {
     <div class="guideline-container">
       <div v-for="(item, index) in guidelineItems" :key="index" :class="getClass(index)">
         <div class="guideline-title">{{ item.title }}</div>
-        <div class="guideline-score">{{ item.score }}</div>
+        <!-- <div class="guideline-score">{{ item.score }}</div> -->
+        <div class="guideline-score">{{ index === 1 ? percentage : item.score }}</div>
       </div>
     </div>
 
