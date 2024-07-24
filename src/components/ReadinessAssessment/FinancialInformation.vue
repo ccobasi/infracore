@@ -1,184 +1,65 @@
+<script setup>
+import { useAnswersStore } from '../../stores/score';
+import { computed } from 'vue';
+
+const store = useAnswersStore();
+
+const questions = [
+  "Copies of the Company's audited accounts and directors' reports for the last five financial years, a statement of accounting policies adopted in the audited accounts and management accounts and details of any changes in accounting policies.",
+  "Financial Projections of the Company for, at least, the next ten (10) financial years, including the impact of the proposed debt finance to be guaranteed.",
+  "Company procedures on revenue collections.",
+  "Summary of bank accounts, listing bank names, balances, account signatories, approval limits and bank statements for the past three (3) months.",
+  "Receivables Aging Report, including details of any debts outstanding from customers which have been due for more than four weeks (where applicable).",
+  "Copies of any available asset registers of the Business, including land, buildings, equipment, vehicles etc.",
+"Details and copies of the latest valuation and basis of valuation of all the assets.",
+"Details of the Company’s current debt profile by type, purpose and maturity dates and copies of any offer letters and agreements in respect of existing borrowings including performance history.",
+"Details of funding sources being explored including debt, equity, grants and relevant documentation.",
+"Details of all related party transactions including agreements and payments to/​from related parties.",
+"Equipment financing plan including debt/​equity split, expected terms, details of any engagements with financiers.",
+"Financial Model of the minigrids.",
+"Detailed breakdown of proposed utilisation of the proceeds of the debt issue/​financing and detailed CAPEX strategy.",
+
+];
+
+const score = computed(() => store.sectionScore('financialInformation'));
+
+
+const questionPairs = computed(() => {
+  const pairs = [];
+  const startIndex = 86;
+  for (let i = 0; i < questions.length; i += 2) {
+    pairs.push(questions.slice(i, i + 2).map((text, index) => ({ text, index: startIndex + i + index })));
+  }
+  return pairs;
+});
+
+</script>
 <template>
   <div class="origination">
     <div class="title">
       <h3>Financial Information</h3>
     </div>
     <div class="content">
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">86. </label>
+      <div class="row" v-for="(questionPair, rowIndex) in questionPairs" :key="rowIndex">
+        <div class="col-6 d-flex" v-for="(question, questionIndex) in questionPair" :key="questionIndex">
+          <label class="mr-3">{{ question.index }}. </label>
           <div class="align">
-            <h4>Copies of the Company's audited accounts and directors' reports for the last five financial years, a statement of accounting policies adopted in the audited accounts and management accounts and details of any changes in accounting policies.</h4>
+            <h4>{{ question.text }}</h4>
             <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">87. </label>
-          <div class="align">
-            <h4>Financial Projections of the Company for, at least, the next ten (10) financial years, including the impact of the proposed debt finance to be guaranteed.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
+              <input :type="'radio'" :id="'Yes' + question.index" :name="'question' + question.index" value="1" v-model="store.answers['question' + question.index]">
+              <label :for="'Yes' + question.index">Yes</label>
+              <input :type="'radio'" :id="'No' + question.index" :name="'question' + question.index" value="0" v-model="store.answers['question' + question.index]">
+              <label :for="'No' + question.index">No</label>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">88. </label>
-          <div class="align">
-            <h4>Company procedures on revenue collections.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">89. </label>
-          <div class="align">
-            <h4>Summary of bank accounts, listing bank names, balances, account signatories, approval limits and bank statements for the past three (3) months.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
+        <!-- <div class="col-6">
+          <button @click="store.evaluateAnswers">Evaluate</button>
+          <p>Total Yes: {{ store.totalYes }}, Percentage: {{ store.percentage }}%</p>
+        </div> -->
       </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">90. </label>
-          <div class="align">
-            <h4>Receivables Aging Report, including details of any debts outstanding from customers which have been due for more than four weeks (where applicable).</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">91. </label>
-          <div class="align">
-            <h4>Copies of any available asset registers of the Business, including land, buildings, equipment, vehicles etc.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">92. </label>
-          <div class="align">
-            <h4>Details and copies of the latest valuation and basis of valuation of all the assets.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">93. </label>
-          <div class="align">
-            <h4>Details of the Company’s current debt profile by type, purpose and maturity dates and copies of any offer letters and agreements in respect of existing borrowings including performance history.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">94. </label>
-          <div class="align">
-            <h4>Details of funding sources being explored including debt, equity, grants and relevant documentation.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">95. </label>
-          <div class="align">
-            <h4>Details of all related party transactions including agreements and payments to/​from related parties.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">96. </label>
-          <div class="align">
-            <h4>Equipment financing plan including debt/​equity split, expected terms, details of any engagements with financiers.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 d-flex">
-          <label class="mr-3">97. </label>
-          <div class="align">
-            <h4>Financial Model of the minigrids.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes2" name="question2" value="Yes">
-              <label for="Yes2">Yes</label>
-              <input type="radio" id="No2" name="question2" value="No">
-              <label for="No2">No</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6 d-flex">
-          <label class="mr-3">98. </label>
-          <div class="align">
-            <h4>Detailed breakdown of proposed utilisation of the proceeds of the debt issue/​financing and detailed CAPEX strategy.</h4>
-            <div class="radio">
-              <input type="radio" id="Yes1" name="question1" value="Yes">
-              <label for="Yes1">Yes</label>
-              <input type="radio" id="No1" name="question1" value="No">
-              <label for="No1">No</label>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <label class="mr-3"></label>
-
-        </div>
-      </div>
-
     </div>
   </div>
 </template>

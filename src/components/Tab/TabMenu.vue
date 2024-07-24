@@ -12,7 +12,7 @@ const corporateComplianceScore = computed(() => store.sectionScore('corporateCom
 const legalScore = computed(() => store.sectionScore('legal'));
 const technicalScore = computed(() => store.sectionScore('technical'));
 const environmentalSocialScore = computed(() => store.sectionScore('environmentalSocial'));
-// const financialInformationScore = computed(() => store.sectionScore('financialInformation'));
+const financialInformationScore = computed(() => store.sectionScore('financialInformation'));
 
 
 const guidelineItems = computed(() => [
@@ -21,7 +21,7 @@ const guidelineItems = computed(() => [
   { title: 'Legal', score: `${legalScore.value.toFixed(2)}%` },
   { title: 'Technical', score: `${technicalScore.value.toFixed(2)}%` },
   { title: 'Environmental & Social', score: `${environmentalSocialScore.value.toFixed(2)}%` },
-  { title: 'Financial Information', score: '0%' }
+  { title: 'Financial Information', score: `${financialInformationScore.value.toFixed(2)}%` }
 ]);
 
 const getClass = (index) => {

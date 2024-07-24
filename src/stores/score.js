@@ -89,6 +89,19 @@ export const useAnswersStore = defineStore('answers', () => {
     question83: null,
     question84: null,
     question85: null,
+    question86: null,
+    question87: null,
+    question88: null,
+    question89: null,
+    question90: null,
+    question91: null,
+    question92: null,
+    question93: null,
+    question94: null,
+    question95: null,
+    question96: null,
+    question97: null,
+    question98: null,
   });
 
   const sections = {
@@ -106,6 +119,11 @@ export const useAnswersStore = defineStore('answers', () => {
       'question71', 'question72', 'question73', 'question74', 'question75',
       'question76', 'question77', 'question78', 'question79', 'question80',
       'question81', 'question82', 'question83', 'question84', 'question85',
+    ],
+    financialInformation: [
+      'question86', 'question87', 'question88', 'question89', 'question90',
+      'question91', 'question92', 'question93', 'question94', 'question95',
+      'question96', 'question97', 'question98'
     ],
   };
 
@@ -133,6 +151,7 @@ export const useAnswersStore = defineStore('answers', () => {
     console.log(`Legal Section Score: ${sectionScore('legal')}`);
     console.log(`Technical Section Score: ${sectionScore('technical')}`);
     console.log(`Environmental & Social Section Score: ${sectionScore('environmentalSocial')}`);
+    console.log(`Financial Information Section Score: ${sectionScore('financialInformation')}`);
   };
 
   return {
