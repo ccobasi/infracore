@@ -34,6 +34,16 @@ const getClass = (index) => {
 
 const percentage = computed(() => `${store.percentage}%`);
 // const percentage = computed(() => `${store.percentage.value.toFixed(2)}%`);
+const totalScore = computed(() => store.totalScore.toFixed(1));
+const progressBarStyle = computed(() => {
+  const radius = 36;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (store.totalScore / 100) * circumference;
+  return {
+    strokeDasharray: `${circumference} ${circumference}`,
+    strokeDashoffset: `${offset}`
+  };
+});
 </script>
 <template>
   <div class="body">
@@ -42,11 +52,16 @@ const percentage = computed(() => `${store.percentage}%`);
       <div class="score">
         <label for="">Overall Readiness Assessment Score</label>
         <div class="circular-progress">
-          <svg class="circle">
+          <!-- <svg class="circle">
             <circle class="bg" cx="40" cy="39.835" r="36"></circle>
             <circle class="progress" cx="40" cy="39.835" r="36"></circle>
           </svg>
-          <div class="percentage">58%</div>
+          <div class="percentage">58%</div> -->
+          <svg class="circle" width="80" height="80" viewBox="0 0 80 80">
+            <circle class="bg" cx="40" cy="40" r="36"></circle>
+            <circle class="progress" cx="40" cy="40" r="36" :style="progressBarStyle"></circle>
+          </svg>
+          <div class="percentage">{{ totalScore }}%</div>
         </div>
       </div>
     </div>
@@ -88,7 +103,7 @@ const percentage = computed(() => `${store.percentage}%`);
 }
 .score label {
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 14.4px;
   text-align: center;
@@ -118,7 +133,7 @@ svg {
 
 .bg {
   fill: none;
-  stroke: #eee;
+  stroke: #e6e6e6;
   stroke-width: 5;
 }
 
@@ -129,6 +144,8 @@ svg {
   stroke-dasharray: 226.08;
   stroke-dashoffset: 94.15;
   transition: stroke-dashoffset 0.5s ease-in-out;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
 .percentage {
   position: absolute;
@@ -181,6 +198,15 @@ svg {
 
 .guideline-item.current {
   font-weight: bold;
+}
+
+.guideline-item.current .guideline-score[data-v-5c5ee6fa],
+.guideline-item.complete .guideline-score {
+  background: #fff;
+  width: 51px;
+  color: #227cbf;
+  border-radius: 10px;
+  padding: 2px 5px;
 }
 
 .guideline-item.complete {
