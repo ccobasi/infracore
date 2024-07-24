@@ -64,6 +64,31 @@ export const useAnswersStore = defineStore('answers', () => {
     question58: null,
     question59: null,
     question60: null,
+    question61: null,
+    question62: null,
+    question63: null,
+    question64: null,
+    question65: null,
+    question66: null,
+    question67: null,
+    question68: null,
+    question69: null,
+    question70: null,
+    question71: null,
+    question72: null,
+    question73: null,
+    question74: null,
+    question75: null,
+    question76: null,
+    question77: null,
+    question78: null,
+    question79: null,
+    question80: null,
+    question81: null,
+    question82: null,
+    question83: null,
+    question84: null,
+    question85: null,
   });
 
   const sections = {
@@ -74,6 +99,13 @@ export const useAnswersStore = defineStore('answers', () => {
       'question49', 'question50', 'question51', 'question52', 'question53',
       'question54', 'question55', 'question56', 'question57', 'question58',
       'question59', 'question60'
+    ],
+    environmentalSocial: [
+      'question61', 'question62', 'question63', 'question64', 'question65',
+      'question66', 'question67', 'question68', 'question69', 'question70',
+      'question71', 'question72', 'question73', 'question74', 'question75',
+      'question76', 'question77', 'question78', 'question79', 'question80',
+      'question81', 'question82', 'question83', 'question84', 'question85',
     ],
   };
 
@@ -100,6 +132,7 @@ export const useAnswersStore = defineStore('answers', () => {
     console.log(`Corporate Compliance Score: ${sectionScore('corporateCompliance')}`);
     console.log(`Legal Section Score: ${sectionScore('legal')}`);
     console.log(`Technical Section Score: ${sectionScore('technical')}`);
+    console.log(`Environmental & Social Section Score: ${sectionScore('environmentalSocial')}`);
   };
 
   return {
