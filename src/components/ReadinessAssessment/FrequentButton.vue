@@ -1,6 +1,9 @@
+<script setup>
+import frameSrc from '../../assets/frame.svg';
+</script>
 <template>
   <div class="sidebar-menu-item">
-    <img class="frame" src="../../assets/frame.svg" alt="frame" />
+    <img class="frame" :src="frameSrc" alt="frame" />
     <div class="text">Frequently Asked Questions</div>
   </div>
 </template>
