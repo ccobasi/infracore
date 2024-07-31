@@ -145,16 +145,6 @@ export const useAnswersStore = defineStore('answers', () => {
     return totalQuestions.value > 0 ? (totalYes.value / totalQuestions.value) * 100 : 0;
   });
 
-  // const totalScore = computed(() => {
-  //   return (
-  //     sectionScore('corporateCompliance') +
-  //     sectionScore('legal') +
-  //     sectionScore('technical') +
-  //     sectionScore('environmentalSocial') +
-  //     sectionScore('financialInformation')
-  //   ) / 5;
-  // });
-
   const totalScore = computed(() => {
     const totalYesCount = totalYes.value;
     const totalQuestionCount = totalQuestions.value;

@@ -73,7 +73,7 @@ const store = useAnswersStore();
       Launch demo modal
     </button> -->
 
-    <div class="save">
+    <div class="save mt-2">
       <button v-if="currentStep > 0" class="back-button" @click="currentStep > 0 && currentStep--">Back</button>
       <button :class="{ 'save-button-right': currentStep === 0 }" class="save-button" @click="saveAndContinue">Save and Continue</button>
     </div>
@@ -140,12 +140,12 @@ main {
   gap: 0px;
   justify-content: space-between;
   opacity: 0px;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   margin-left: 45px;
 }
 .support {
-  width: 516px;
+  width: 530px;
   height: 25px;
   gap: 0px;
   opacity: 0px;
@@ -153,8 +153,8 @@ main {
 }
 .support label {
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   line-height: 14.4px;
   text-align: left;
 }
@@ -209,5 +209,7 @@ main {
 }
 .save-button-right {
   margin-left: 1078px;
+}
+@media screen and (max-width: 768px) {
 }
 </style>

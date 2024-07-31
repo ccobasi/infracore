@@ -299,7 +299,7 @@ a {
   margin-left: -25.5px;
   margin-right: -25.5px;
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -325,7 +325,7 @@ a {
   position: relative;
   width: fit-content;
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -340,7 +340,7 @@ a {
   position: relative;
   width: fit-content;
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -355,7 +355,7 @@ a {
   margin-left: -19px;
   margin-right: -19px;
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -370,7 +370,7 @@ a {
   margin-left: -27px;
   margin-right: -27px;
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   color: #000000;
   font-size: 16px;
   text-align: center;
@@ -392,5 +392,26 @@ a {
   line-height: var(--h4-line-height);
   white-space: nowrap;
   font-style: var(--h4-font-style);
+}
+@media screen and (max-width: 768px) {
+  .frame {
+    width: 50%;
+  }
+
+  .frame .overlap {
+    position: relative;
+    width: 1168px;
+    height: 517px;
+    top: 67px;
+    left: 20px;
+  }
+
+  .frame .vector {
+    position: absolute;
+    width: 600px;
+    height: 464px;
+    top: 0;
+    left: 0;
+  }
 }
 </style>

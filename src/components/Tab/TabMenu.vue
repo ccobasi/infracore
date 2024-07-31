@@ -103,7 +103,7 @@ const progressBarStyle = computed(() => {
 }
 .score label {
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 14.4px;
   text-align: center;
@@ -245,4 +245,57 @@ svg {
 .guideline-score {
   font-size: 12px;
 }
+@media screen and (max-width: 768px) {
+  .tab {
+    flex-direction: column;
+    width: 780px;
+  }
+  .guideline-container {
+    flex-direction: column;
+    margin-bottom: 55%;
+    margin-top: 10%;
+  }
+  .guideline-item {
+    margin: 5px 0;
+    width: 50%;
+  }
+}
 </style>
+<!-- @media (max-width: 768px) {
+  .tab {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tab h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .score {
+    width: 100%;
+    margin: 20px 0;
+    justify-content: center;
+  }
+  .circular-progress {
+    width: 60px;
+    height: 60px;
+  }
+  .guideline-container {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .guideline-item {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    clip-path: none;
+    border-radius: 10px;
+  }
+  .guideline-item:first-child,
+  .guideline-item:last-child {
+    clip-path: none;
+    border-radius: 10px;
+  }
+} -->
