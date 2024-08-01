@@ -36,7 +36,7 @@ const percentage = computed(() => `${store.percentage}%`);
 // const percentage = computed(() => `${store.percentage.value.toFixed(2)}%`);
 const totalScore = computed(() => store.totalScore.toFixed(1));
 const progressBarStyle = computed(() => {
-  const radius = 36;
+  const radius = 54;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (store.totalScore / 100) * circumference;
   return {
@@ -51,15 +51,10 @@ const progressBarStyle = computed(() => {
       <h2>Project Readiness Assessment</h2>
       <div class="score">
         <label for="">Overall Readiness Assessment Score</label>
-        <div class="circular-progress">
-          <!-- <svg class="circle">
-            <circle class="bg" cx="40" cy="39.835" r="36"></circle>
-            <circle class="progress" cx="40" cy="39.835" r="36"></circle>
-          </svg>
-          <div class="percentage">58%</div> -->
-          <svg class="circle" width="80" height="80" viewBox="0 0 80 80">
-            <circle class="bg" cx="40" cy="40" r="36"></circle>
-            <circle class="progress" cx="40" cy="40" r="36" :style="progressBarStyle"></circle>
+        <div class="circular-progress ">
+          <svg class="circle" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="bg" cx="60" cy="60" r="54" stroke-width="12"></circle>
+            <circle class="progress" cx="60" cy="60" r="54" stroke-width="12" :style="progressBarStyle"></circle>
           </svg>
           <div class="percentage">{{ totalScore }}%</div>
         </div>
@@ -78,7 +73,7 @@ const progressBarStyle = computed(() => {
 </template>
 <style scoped>
 .tab {
-  width: 1380px;
+  width: 100%;
   height: 79.67px;
   gap: 0px;
   justify-content: space-between;
@@ -94,7 +89,7 @@ const progressBarStyle = computed(() => {
 }
 .score {
   display: flex;
-  width: 298px;
+  width: 368px;
   height: 79.67px;
   font-size: 16px;
   gap: 5px;
@@ -103,7 +98,7 @@ const progressBarStyle = computed(() => {
 }
 .score label {
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 14.4px;
   text-align: center;
@@ -112,53 +107,45 @@ const progressBarStyle = computed(() => {
 
 .circular-progress {
   position: relative;
-  width: 80px;
-  height: 79.67px;
-  margin: 1px auto;
-  gap: 0px;
-  opacity: 0px;
+  width: 105px;
+  height: 105px;
 }
 
 .circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
 
+.bg {
+  fill: none;
+  stroke: #e6e6e6;
+}
+
+.progress {
+  fill: none;
+  stroke: #4caf50;
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(0.25turn);
+  transform-origin: 50% 50%;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: bold;
+}
 svg {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
 }
 
-.bg {
-  fill: none;
-  stroke: #e6e6e6;
-  stroke-width: 5;
-}
-
-.progress {
-  fill: none;
-  stroke: #4caf50;
-  stroke-width: 5;
-  stroke-dasharray: 226.08;
-  stroke-dashoffset: 94.15;
-  transition: stroke-dashoffset 0.5s ease-in-out;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
-.percentage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: bold;
-  color: #4caf50;
-}
 .guideline-container {
   display: flex;
-  width: 1240px;
+  width: 100%;
   height: 56px;
   gap: 10px;
   align-items: flex-start;
@@ -248,16 +235,22 @@ svg {
 @media screen and (max-width: 768px) {
   .tab {
     flex-direction: column;
-    width: 780px;
+    width: 100%;
+    align-items: center;
+  }
+  .circular-progress {
+    width: 100px;
+    height: 100px;
   }
   .guideline-container {
     flex-direction: column;
     margin-bottom: 55%;
-    margin-top: 10%;
+    margin-top: 12%;
+    align-items: center;
   }
   .guideline-item {
     margin: 5px 0;
-    width: 50%;
+    width: 75%;
   }
 }
 </style>

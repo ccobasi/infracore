@@ -395,23 +395,59 @@ a {
 }
 @media screen and (max-width: 768px) {
   .frame {
-    width: 50%;
+    width: 100%;
   }
 
   .frame .overlap {
-    position: relative;
-    width: 1168px;
-    height: 517px;
-    top: 67px;
-    left: 20px;
+    width: 100%;
+    left: 0;
   }
 
   .frame .vector {
+    width: 650px;
+  }
+
+  .frame .div {
+    width: 100%;
+    gap: 10px;
     position: absolute;
-    width: 600px;
-    height: 464px;
-    top: 0;
-    left: 0;
+    top: 9px;
+    left: 40px;
+  }
+
+  .frame .div-2 {
+    gap: 10px;
+    top: 100px;
+  }
+
+  .frame .div-3 {
+    width: 200px;
+  }
+
+  .frame .overlap-group-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .frame .overlap-group {
+    width: 41px;
+    height: 41px;
+  }
+
+  .frame .text-wrapper-2,
+  .frame .text-wrapper-3,
+  .frame .text-wrapper-4,
+  .frame .text-wrapper-5,
+  .frame .letter-of-credit,
+  .frame .text-wrapper-6 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.2px;
+    white-space: wrap;
+  }
+
+  .frame .p {
+    font-size: 10px;
   }
 }
 </style>

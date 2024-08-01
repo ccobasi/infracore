@@ -36,7 +36,7 @@ html {
   margin-bottom: 10px;
   font-family: inherit, sans-serif;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 600;
   color: #000;
 }
 .origination p {

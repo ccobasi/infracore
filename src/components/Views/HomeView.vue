@@ -210,6 +210,45 @@ main {
 .save-button-right {
   margin-left: 1078px;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .save {
+    width: 100%;
+  }
+  .save button {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .question {
+    width: 100%;
+    padding-right: 80px;
+  }
+  .support {
+    width: 530px;
+    height: 25px;
+    gap: 0px;
+    opacity: 0px;
+    margin-top: 10px;
+  }
+  .support label {
+    font-size: 11px;
+  }
+  .num {
+    font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-align: left;
+    color: #47b65c;
+  }
+  .whatsapp {
+    font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    text-align: left;
+  }
+  .save-button-right[data-v-d2c49f44] {
+    margin-left: 73%;
+  }
 }
 </style>

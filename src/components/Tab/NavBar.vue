@@ -70,10 +70,14 @@ export default {
     <div class="logo">
       <img src="../../assets/logo.png" alt="brand_logo">
     </div>
-    <v-tabs v-model="tab" style="border-bottom:none; margin-left: 24%;">
+    <!-- <v-tabs v-model="tab" style="border-bottom:none; margin-left: 24%;">
       <v-tab value="two" style="color:#227CBF;font-family: Roboto;font-size: 16px;font-style: normal;font-weight: 400;line-height: 19.2px;">Transactions</v-tab>
       <v-tab value="one" style="color:#808080;font-family: Roboto;font-size: 16px;font-style: normal;font-weight: 400;line-height: 19.2px;">Company Profile</v-tab>
 
+    </v-tabs> -->
+    <v-tabs v-model="tab" class="custom-tabs">
+      <v-tab value="two" class="custom-tab transactions-tab">Transactions</v-tab>
+      <v-tab value="one" class="custom-tab company-profile-tab">Company Profile</v-tab>
     </v-tabs>
 
     <v-spacer></v-spacer>
@@ -141,12 +145,12 @@ export default {
   font-weight: 400;
   font-size: 30px;
   line-height: 24px;
-
   background: linear-gradient(90deg, #227cbf 0%, #47b65c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .brand {
   color: var(--Primary, #227cbf);
   font-family: Inter;
@@ -155,6 +159,28 @@ export default {
   font-weight: 700;
   line-height: 24px;
 }
+
+.custom-tabs {
+  border-bottom: none;
+  margin-left: 24%;
+}
+
+.custom-tab {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+
+.transactions-tab {
+  color: #227cbf;
+}
+
+.company-profile-tab {
+  color: #808080;
+}
+
 @media screen and (max-width: 768px) {
   .pageheader {
     overflow-x: hidden;
@@ -174,8 +200,20 @@ export default {
     width: 50%;
     height: 20%;
   }
+
   .brand {
     font-size: 18px;
+  }
+  .custom-tabs {
+    margin-left: 8%;
+  }
+
+  .custom-tab {
+    font-size: 11px;
+    font-weight: 200;
+  }
+  .subheader {
+    font-size: 13px;
   }
 }
 </style>

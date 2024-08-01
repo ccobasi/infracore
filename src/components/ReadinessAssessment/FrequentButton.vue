@@ -1,9 +1,9 @@
 <script setup>
-// import frameSrc from '../../assets/frame.svg';
+import frameSrc from '../../assets/Frame.svg';
 </script>
 <template>
   <div class="sidebar-menu-item">
-    <!-- <img class="frame" :src="frameSrc" alt="frame" /> -->
+    <img class="frame" :src="frameSrc" alt="frame" />
     <div class="text">Frequently Asked Questions</div>
   </div>
 </template>
@@ -117,5 +117,14 @@ a {
   letter-spacing: 0;
   line-height: 19.2px;
   white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .sidebar-menu-item {
+    width: 180px;
+  }
+
+  .sidebar-menu-item .text {
+    font-size: 10px;
+  }
 }
 </style>
