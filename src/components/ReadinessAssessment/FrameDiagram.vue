@@ -18,8 +18,8 @@ const steps = [
   <div class="frame">
 
     <div class="overlap">
-      <img class="vector" src="../../assets/Vector 1.svg" alt="journey map" />
-      <div class="div">
+      <img class="vector" src="../../assets/journey.jpg" alt="journey map" />
+      <!-- <div class="div">
         <div class="div-2">
           <div class="div-3">
             <div class="overlap-group-wrapper">
@@ -126,7 +126,7 @@ const steps = [
           </div>
           <div class="div-3"></div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

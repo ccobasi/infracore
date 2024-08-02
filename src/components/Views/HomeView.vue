@@ -153,7 +153,7 @@ main {
 }
 .support label {
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 14.4px;
   text-align: left;
