@@ -48,7 +48,10 @@ const progressBarStyle = computed(() => {
 <template>
   <div class="body">
     <div class="tab d-flex">
-      <h2>Project Readiness Assessment</h2>
+      <div class="readiness">
+        <h2>Project Readiness Assessment</h2>
+        <p>This assessment takes just about 20 minutes to complete.</p>
+      </div>
       <div class="score">
         <label for="">Overall Readiness Assessment Score</label>
         <div class="circular-progress ">
@@ -86,6 +89,14 @@ const progressBarStyle = computed(() => {
   font-weight: 600;
   line-height: 43.2px;
   text-align: left;
+}
+.readiness p {
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 14.4px;
+  text-align: left;
+  padding-top: 5%;
 }
 .score {
   display: flex;
@@ -145,14 +156,14 @@ svg {
 
 .guideline-container {
   display: flex;
-  width: 100%;
+  width: 92.5%;
   height: 56px;
   gap: 10px;
   align-items: flex-start;
   padding: 0;
   list-style: none;
   position: relative;
-  margin: 4% 4.5%;
+  margin: 4.5% 4.5%;
 }
 
 .guideline-container::before {
@@ -223,7 +234,7 @@ svg {
   font-weight: bold;
   font-size: 16px;
   font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 650;
   line-height: 19.2px;
   text-align: left;

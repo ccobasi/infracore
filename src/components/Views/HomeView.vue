@@ -65,27 +65,25 @@ const store = useAnswersStore();
       </div>
     </div> -->
     <NavBar />
+
     <!-- <TabMenu /> -->
     <TabMenu :currentStep="currentStep" :percentage="store.percentage" />
+    <div class="question">
+      <div class="support">
+        <label for="">For Technical Support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span>
+      </div>
+
+      <FrequentButtonVue />
+    </div>
     <component :is="steps[currentStep]" />
 
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
       Launch demo modal
     </button> -->
-
     <div class="save mt-2">
       <button v-if="currentStep > 0" class="back-button" @click="currentStep > 0 && currentStep--">Back</button>
       <button :class="{ 'save-button-right': currentStep === 0 }" class="save-button" @click="saveAndContinue">Save and Continue</button>
     </div>
-
-    <div class="question">
-      <div class="support">
-        <label for="">For Technical Support call:</label> <span class="num">08022658974</span> <label for="">or email:</label> <span class="num">tech@infracredit.ng</span> <span class="whatsapp">or WhatsApp us:</span> <span class="num">Here</span>
-      </div>
-
-      <FrequentButtonVue />
-    </div>
-
   </main>
 </template>
  <style scoped>
@@ -108,15 +106,14 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1250px;
+  width: 93%;
   height: 50px;
   gap: 10px;
   opacity: 1;
   margin: auto;
 }
 .save button {
-  width: 173px;
+  width: 174px;
   height: 50px;
   padding: 10px 20px;
   gap: 10px;
@@ -135,7 +132,7 @@ main {
 
 .question {
   display: flex;
-  width: 1250px;
+  width: 93%;
   height: 44px;
   gap: 0px;
   justify-content: space-between;
@@ -208,7 +205,7 @@ main {
   background: linear-gradient(90deg, #227cbf 0%, #47b65c 100%);
 }
 .save-button-right {
-  margin-left: 1078px;
+  margin-left: 85%;
 }
 @media (max-width: 768px) {
   .save {
