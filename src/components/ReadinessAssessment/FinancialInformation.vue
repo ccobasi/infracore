@@ -111,6 +111,7 @@ html {
 .col-6 {
   flex: 1;
   padding: 10px;
+  max-width: 50%;
 }
 .col-6 label,
 h4 {

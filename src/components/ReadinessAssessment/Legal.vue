@@ -48,6 +48,7 @@ const questionPairs = computed(() => {
 });
 
 </script>
+
 <template>
   <div class="origination">
     <div class="title">
@@ -58,14 +59,14 @@ const questionPairs = computed(() => {
     <div class="content">
       <div class="row" v-for="(questionPair, rowIndex) in questionPairs" :key="rowIndex">
         <div class="col-6 d-flex" v-for="(question, questionIndex) in questionPair" :key="questionIndex">
-          <label class="mr-3">{{ question.index }}. </label>
+          <label class="mr-3">{{ rowIndex * 2 + questionIndex + 1 }}. </label>
           <div class="align">
             <h4>{{ question.text }}</h4>
             <div class="radio">
-              <input :type="'radio'" :id="'Yes' + question.index" :name="'question' + question.index" value="1" v-model="store.answers['question' + question.index]">
-              <label :for="'Yes' + question.index">Yes</label>
-              <input :type="'radio'" :id="'No' + question.index" :name="'question' + question.index" value="0" v-model="store.answers['question' + question.index]">
-              <label :for="'No' + question.index">No</label>
+              <input :type="'radio'" :id="'Yes' + (rowIndex * 2 + questionIndex + 1)" :name="'question' + (rowIndex * 2 + questionIndex + 1)" value="1" v-model="store.answers['question' + (rowIndex * 2 + questionIndex + 1)]">
+              <label :for="'Yes' + (rowIndex * 2 + questionIndex + 1)">Yes</label>
+              <input :type="'radio'" :id="'No' + (rowIndex * 2 + questionIndex + 1)" :name="'question' + (rowIndex * 2 + questionIndex + 1)" value="0" v-model="store.answers['question' + (rowIndex * 2 + questionIndex + 1)]">
+              <label :for="'No' + (rowIndex * 2 + questionIndex + 1)">No</label>
             </div>
           </div>
         </div>
@@ -77,9 +78,9 @@ const questionPairs = computed(() => {
         </div> -->
       </div>
     </div>
-
   </div>
 </template>
+
 
 <style scoped>
 body,
@@ -99,24 +100,10 @@ html {
 }
 .title {
   margin-bottom: 10px;
-  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif, sans-serif;
   font-size: 24px;
-  font-weight: 600;
-  color: #000;
-}
-.title h3 {
-  font-family: inherit;
-  font-size: 1.5rem;
   font-weight: 700;
-}
-.title p {
-  font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 650;
-  line-height: 19.2px;
-  text-align: left;
   color: #000;
-  margin-bottom: 30px;
 }
 .content {
   max-width: 100%;
@@ -133,6 +120,7 @@ html {
 .col-6 {
   flex: 1;
   padding: 10px;
+  max-width: 50%;
 }
 .col-6 label,
 h4 {
