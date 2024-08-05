@@ -211,14 +211,14 @@ a {
 }
 .frame {
   position: relative;
-  width: 1200px;
+  width: 100%;
   height: 660px;
   background-color: #fff;
 }
 
 .frame .overlap {
   position: relative;
-  width: 1168px;
+  width: 100%;
   height: 517px;
   top: 67px;
   left: 20px;
@@ -226,7 +226,7 @@ a {
 
 .frame .vector {
   position: absolute;
-  width: 1168px;
+  width: 100%;
   height: 464px;
   top: 0;
   left: 0;
